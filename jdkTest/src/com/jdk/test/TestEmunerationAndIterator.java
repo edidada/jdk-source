@@ -47,7 +47,7 @@ public class TestEmunerationAndIterator {
     }
 
     /*
-     * 通过Enumeration遍历Hashtable
+         * 通过Enumeration遍历Hashtable
      */
     private static void enumHashtable(Hashtable table) {
         long startTime = System.currentTimeMillis();
