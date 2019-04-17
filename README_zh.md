@@ -11,3 +11,5 @@ IDEA
 
 看周志明《深入理解Java虚拟机》自己编译hotspot源码，写Java代码跑在自己编译的虚拟机上
 
+jdbc_diagram 文件夹保存的是类图
+view_log保存的是浏览记录
