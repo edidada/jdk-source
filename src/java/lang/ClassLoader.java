@@ -155,6 +155,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * @see      #resolveClass(Class)
  * @since 1.0
  */
+
+/**
+ *
+ */
 public abstract class ClassLoader {
 
     private static native void registerNatives();
