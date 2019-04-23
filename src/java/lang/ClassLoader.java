@@ -157,7 +157,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 
 /**
- *
+ * 类加载器，tomcat中有实现自己的ClassLoader
  */
 public abstract class ClassLoader {
 
