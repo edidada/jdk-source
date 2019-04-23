@@ -33,6 +33,13 @@ import java.util.*;
  * @since 1.6
  */
 
+/**
+ *
+ * mysql-connector-java 这个库，用到了
+ *
+ * JDBC4DatabaseMetaData public RowIdLifetime getRowIdLifetime()
+ *
+ */
 public enum RowIdLifetime {
 
     /**

@@ -74,6 +74,12 @@ public interface PreparedStatement extends Statement {
      * method has been exceeded and has at least attempted to cancel
      * the currently running {@code Statement}
      */
+
+    /**
+     *
+     * @return
+     * @throws SQLException
+     */
     ResultSet executeQuery() throws SQLException;
 
     /**

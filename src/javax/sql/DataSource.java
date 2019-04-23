@@ -71,6 +71,10 @@ import java.sql.Wrapper;
  * @since 1.4
  */
 
+/**
+ * jdk源码中并没有DataSource的实现类，交给三方库实现
+ * 比如：com.zaxxer.hikari.util.DriverDataSource
+ */
 public interface DataSource  extends CommonDataSource,Wrapper {
 
   /**
