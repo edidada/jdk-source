@@ -1,0 +1,7 @@
+# DatabaseMetaData
+
+有关整个数据库的综合信息。
+此接口由驱动程序供应商实现，以便用户了解数据库管理系统（DBMS）的功能以及基于与其一起使用的JDBC TM技术（“JDBC驱动程序”）的驱动程序。不同的关系DBMS通常支持不同的功能，以不同的方式实现功能，并使用不同的数据类型。此外，驱动程序可以在DBMS提供的功能之上实现功能。此接口中的方法返回的信息适用于特定驱动程序和特定DBMS协同工作的功能。请注意，如本文档中所使用的，术语“数据库”通常用于指代驱动程序和DBMS。
+此接口的用户通常是需要发现如何处理底层DBMS的工具。对于打算与多个DBMS一起使用的应用程序尤其如此。例如，工具可能使用该方法 getTypeInfo来找出可以在CREATE TABLE语句中使用的数据类型 。或者用户可以调用该方法 supportsCorrelatedSubqueries以查看是否可以使用相关子查询或supportsBatchUpdates查看是否可以使用批量更新。
+某些DatabaseMetaData方法以ResultSet对象的形式返回信息列表。常规ResultSet方法（如 getString和getInt）可用于从这些ResultSet对象中检索数据。如果给定形式的元数据不可用，ResultSet 则返回空的。ResultSet对于给定方法，对象返回的列之外的其他列可以由JDBC驱动程序供应商定义，并且必须通过其列标签访问。
+一些DatabaseMetaData方法采用String模式的参数。这些参数都有诸如fooPattern之类的名称。在模式String中，“％”表示匹配0个或更多字符的任何子字符串，“_”表示匹配任何一个字符。仅返回与搜索模式匹配的元数据条目。如果将搜索模式参数设置为null，则将从搜索中删除该参数的标准。
