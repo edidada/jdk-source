@@ -123,3 +123,5 @@ HavingClauseParser
 --user
 
 ```
+
+[java关于xml的注解： JAXB](https://blog.csdn.net/xlxxcc/article/details/52789405)
