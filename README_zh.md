@@ -17,3 +17,5 @@ jdkTest
 设置jdk为jdk7
 运行
 
+设置jdkTest依赖jdk7-source失败
+
