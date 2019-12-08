@@ -1,9 +1,9 @@
 package com.jdk.test;
 
 /**
- * @author ÍõÆ¼
+ * @author ç‹è
  * @date 2017/12/18 0018
- * ÑéÖ¤wait(3000)·½·¨µ÷ÓÃºó£¬3Ãë¹ıÈ¥ÁË²»»áÁ¢¼´Ö´ĞĞ£¬³ıÁËcpu×ÊÔ´Íâ£¬»¹ĞèÒªµÈ´ıËø×ÊÔ´¡£
+ * éªŒè¯wait(3000)æ–¹æ³•è°ƒç”¨åï¼Œ3ç§’è¿‡å»äº†ä¸ä¼šç«‹å³æ‰§è¡Œï¼Œé™¤äº†cpuèµ„æºå¤–ï¼Œè¿˜éœ€è¦ç­‰å¾…é”èµ„æºã€‚
  */
 public class WaitForever {
 
@@ -15,13 +15,13 @@ public class WaitForever {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("ÂíÉÏÖ´ĞĞwait£¨3000£©·½·¨");
+                System.out.println("é©¬ä¸Šæ‰§è¡Œwaitï¼ˆ3000ï¼‰æ–¹æ³•");
                 synchronized (monitor) {
                     try {
                         start = System.currentTimeMillis();
                         monitor.wait(3000);
-                        System.out.println("wait·½·¨½áÊøÁË");
-                        System.out.println("µÈ´ıÁË" + (System.currentTimeMillis() - start) / 1000 + "Ãë¡£");
+                        System.out.println("waitæ–¹æ³•ç»“æŸäº†");
+                        System.out.println("ç­‰å¾…äº†" + (System.currentTimeMillis() - start) / 1000 + "ç§’ã€‚");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -30,7 +30,7 @@ public class WaitForever {
         }).start();
 
         Thread.sleep(100);
-//        Ä£ÄâËø×ÊÔ´±»Õ¼ÓÃ¡£
+//        æ¨¡æ‹Ÿé”èµ„æºè¢«å ç”¨ã€‚
         synchronized (monitor) {
             Thread.sleep(500000);
         }
