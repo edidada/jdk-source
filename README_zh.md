@@ -11,3 +11,9 @@ IDEA
 
 看周志明《深入理解Java虚拟机》自己编译hotspot源码，写Java代码跑在自己编译的虚拟机上
 
+添加子模块
+jdkTest
+
+设置jdk为jdk7
+运行
+
