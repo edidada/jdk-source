@@ -6,32 +6,32 @@ import java.util.Iterator;
 import java.util.Random;
 
 /**
- * @author ÍõÆ¼
+ * @author ç‹è
  * @date 2017/12/9 0009
  */
-//EmunerationËÙ¶È¿ìÒ»µã£¬ÒòÎªIteratorÖ§³Öfail-fast£¬²Ù×÷»á¶àÒ»Ğ©¡£
-//EmunerationÔÚjdk1.0Ê±Éè¼Æ£¬IteratorÔÚ1.2Ê±²úÉú¡£
-//IteratorÖĞ¶àÁËÒ»¸öremove·½·¨£¬¿ÉÒÔ½øĞĞ¼¯ºÏµÄĞŞ¸Ä
+//Emunerationé€Ÿåº¦å¿«ä¸€ç‚¹ï¼Œå› ä¸ºIteratoræ”¯æŒfail-fastï¼Œæ“ä½œä¼šå¤šä¸€äº›ã€‚
+//Emunerationåœ¨jdk1.0æ—¶è®¾è®¡ï¼ŒIteratoråœ¨1.2æ—¶äº§ç”Ÿã€‚
+//Iteratorä¸­å¤šäº†ä¸€ä¸ªremoveæ–¹æ³•ï¼Œå¯ä»¥è¿›è¡Œé›†åˆçš„ä¿®æ”¹
 public class TestEmunerationAndIterator {
     public static void main(String[] args) {
         int val;
         Random r = new Random();
         Hashtable table = new Hashtable();
         for (int i = 0; i < 3000000; i++) {
-            // Ëæ»ú»ñÈ¡Ò»¸ö[0,100)Ö®¼äµÄÊı×Ö
+            // éšæœºè·å–ä¸€ä¸ª[0,100)ä¹‹é—´çš„æ•°å­—
             val = r.nextInt(100);
             table.put(String.valueOf(i), val);
         }
 
-        // Í¨¹ıIterator±éÀúHashtable
+        // é€šè¿‡Iteratoréå†Hashtable
         iterateHashtable(table);
 
-        // Í¨¹ıEnumeration±éÀúHashtable
+        // é€šè¿‡Enumerationéå†Hashtable
         enumHashtable(table);
     }
 
     /*
-     * Í¨¹ıIterator±éÀúHashtable
+     * é€šè¿‡Iteratoréå†Hashtable
      */
     private static void iterateHashtable(Hashtable table) {
         long startTime = System.currentTimeMillis();
@@ -47,7 +47,7 @@ public class TestEmunerationAndIterator {
     }
 
     /*
-         * Í¨¹ıEnumeration±éÀúHashtable
+         * é€šè¿‡Enumerationéå†Hashtable
      */
     private static void enumHashtable(Hashtable table) {
         long startTime = System.currentTimeMillis();

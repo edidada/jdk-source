@@ -1,13 +1,13 @@
 package com.jdk.test;
 
 /**
- * @author ÍõÆ¼
+ * @author ç‹è
  * @date 2018/2/19 0019
  */
 public class TestCloneOfArrayList {
 
     public static void main(String[] args) {
-        //²âÊÔÇ³¸´ÖÆ
+        //æµ‹è¯•æµ…å¤åˆ¶
 //        ArrayList<Integer> list = new ArrayList<>();
 //        list.add(1);
 //        list.add(2);
@@ -17,7 +17,7 @@ public class TestCloneOfArrayList {
 //        System.out.println(list);
 //        System.out.println(list2);
 
-        //²âÊÔÉî¸´ÖÆ
+        //æµ‹è¯•æ·±å¤åˆ¶
 //        ArrayList<User> list = new ArrayList<>();
 //        list.add(new User("wanwanpp", 19));
 //        ArrayList<User> list2 = (ArrayList<User>) list.clone();

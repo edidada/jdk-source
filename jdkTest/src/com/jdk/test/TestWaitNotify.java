@@ -1,11 +1,11 @@
 package com.jdk.test;
 
 /**
- * @author ÍõÆ¼
+ * @author ç‹è
  * @date 2017/12/9 0009
  */
-//java.lang.IllegalMonitorStateExceptionÒì³££º³¢ÊÔµÈ´ıÒ»¸ö¶ÔÏóµÄ¼àÊÓÆ÷»òÕßÈ¥Í¨ÖªÆäËûÕıÔÚµÈ´ıÕâ¸ö¶ÔÏó¼àÊÓÆ÷µÄÏß³Ì£¬
-// µ«ÊÇÃ»ÓĞÓµÓĞÕâ¸ö¼àÊÓÆ÷µÄËùÓĞÈ¨¡£¼´Î´»ñÈ¡Ëø¾Íµ÷ÓÃwait»òÕßnotify
+//java.lang.IllegalMonitorStateExceptionå¼‚å¸¸ï¼šå°è¯•ç­‰å¾…ä¸€ä¸ªå¯¹è±¡çš„ç›‘è§†å™¨æˆ–è€…å»é€šçŸ¥å…¶ä»–æ­£åœ¨ç­‰å¾…è¿™ä¸ªå¯¹è±¡ç›‘è§†å™¨çš„çº¿ç¨‹ï¼Œ
+// ä½†æ˜¯æ²¡æœ‰æ‹¥æœ‰è¿™ä¸ªç›‘è§†å™¨çš„æ‰€æœ‰æƒã€‚å³æœªè·å–é”å°±è°ƒç”¨waitæˆ–è€…notify
 public class TestWaitNotify {
 
     public static Object object = new Object();
@@ -17,31 +17,31 @@ public class TestWaitNotify {
                 synchronized (object) {
                     try {
                         object.wait();
-                        System.out.println("waitThreadÏß³Ì±»»½ĞÑÁË");
+                        System.out.println("waitThreadçº¿ç¨‹è¢«å”¤é†’äº†");
                     } catch (InterruptedException e) {
-                        //catchÖ´ĞĞ²¶×½Òì³£ºóµÄ´¦Àí
+                        //catchæ‰§è¡Œæ•æ‰å¼‚å¸¸åçš„å¤„ç†
 
-                        System.out.println("waitThreadÏß³Ì±»ÖĞ¶ÏÁË");
+                        System.out.println("waitThreadçº¿ç¨‹è¢«ä¸­æ–­äº†");
                         e.printStackTrace();
                         try {
                             Thread.sleep(100);
                         } catch (InterruptedException e1) {
                             e1.printStackTrace();
                         }
-                        System.out.println("´òÓ¡Òì³£");
+                        System.out.println("æ‰“å°å¼‚å¸¸");
                     }
                 }
             }
         });
         waitThread.start();
 
-        System.out.println("waitThreadÏß³ÌÒÑ¾­½øÈëwait×´Ì¬¡£");
+        System.out.println("waitThreadçº¿ç¨‹å·²ç»è¿›å…¥waitçŠ¶æ€ã€‚");
         Thread.sleep(1000);
-        //»½ĞÑ
+        //å”¤é†’
 //        synchronized (object) {
 //            object.notify();
 //        }
-        //ÖĞ¶Ï
+        //ä¸­æ–­
         waitThread.interrupt();
         Thread.sleep(1000);
 
