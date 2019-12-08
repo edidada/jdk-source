@@ -17,5 +17,7 @@ jdkTest
 设置jdk为jdk7
 运行
 
-设置jdkTest依赖jdk7-source失败
+,但是部署到Linux服务器的时候就出错了
 
+JPEGCodec.java
+Error:(19, 27) java: 程序包sun.awt.image.codec不存在

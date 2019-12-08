@@ -3,7 +3,7 @@ package com.jdk.test;
 import java.util.*;
 
 /**
- * @author ÍõÆ¼
+ * @author ç‹è
  * @date 2017/12/9 0009
  */
 public class TestHashTable {
@@ -13,44 +13,44 @@ public class TestHashTable {
     }
 
     private static void testHashtableAPIs() {
-        // ³õÊ¼»¯Ëæ»úÖÖ×Ó
+        // åˆå§‹åŒ–éšæœºç§å­
         Random r = new Random();
-        // ĞÂ½¨Hashtable
+        // æ–°å»ºHashtable
         Hashtable table = new Hashtable();
-        // Ìí¼Ó²Ù×÷
+        // æ·»åŠ æ“ä½œ
         table.put("one", r.nextInt(10));
         table.put("two", r.nextInt(10));
         table.put("three", r.nextInt(10));
 
-        // ´òÓ¡³ötable
+        // æ‰“å°å‡ºtable
         System.out.println("table:" + table);
 
-        // Í¨¹ıIterator±éÀúkey-value
+        // é€šè¿‡Iteratoréå†key-value
         Iterator iter = table.entrySet().iterator();
         while (iter.hasNext()) {
             Map.Entry entry = (Map.Entry) iter.next();
             System.out.println("next : " + entry.getKey() + " - " + entry.getValue());
         }
 
-        // HashtableµÄ¼üÖµ¶Ô¸öÊı
+        // Hashtableçš„é”®å€¼å¯¹ä¸ªæ•°
         System.out.println("size:" + table.size());
 
-        // containsKey(Object key) :ÊÇ·ñ°üº¬¼ükey
+        // containsKey(Object key) :æ˜¯å¦åŒ…å«é”®key
         System.out.println("contains key two : " + table.containsKey("two"));
         System.out.println("contains key five : " + table.containsKey("five"));
 
-        // containsValue(Object value) :ÊÇ·ñ°üº¬Öµvalue
+        // containsValue(Object value) :æ˜¯å¦åŒ…å«å€¼value
         System.out.println("contains value 0 : " + table.containsValue(new Integer(0)));
 
-        // remove(Object key) £º É¾³ı¼ükey¶ÔÓ¦µÄ¼üÖµ¶Ô
+        // remove(Object key) ï¼š åˆ é™¤é”®keyå¯¹åº”çš„é”®å€¼å¯¹
         table.remove("three");
 
         System.out.println("table:" + table);
 
-        // clear() £º Çå¿ÕHashtable
+        // clear() ï¼š æ¸…ç©ºHashtable
         table.clear();
 
-        // isEmpty() : HashtableÊÇ·ñÎª¿Õ
+        // isEmpty() : Hashtableæ˜¯å¦ä¸ºç©º
         System.out.println((table.isEmpty() ? "table is empty" : "table is not empty"));
     }
 
