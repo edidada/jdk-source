@@ -21,3 +21,7 @@ jdkTest
 
 JPEGCodec.java
 Error:(19, 27) java: 程序包sun.awt.image.codec不存在
+
+
+remote to this repo [testjava7](github.com/edidada/testjava7)
+
